@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+
+</head>
+<body ng-app = "bulb">
+<div ng-controller="myctrl as ctrl" style="margin: 10% 0% 0% 40% ">
+
+    <md-switch ng-model="ctrl.status" aria-label="Switch 1">
+        Switch 1:
+    </md-switch>
+
+
+
+<button style="width:50px;" ng-click="ctrl.On()">{{ctrl.status}}</button>
+    <div class="container">
+
+        <h2>Light bulb</h2>
+
+        <a class="bulb-light">
+
+            <div id="light"></div>
+
+            <div id="bulb">
+                <div class="bulb-top" ng-class="ctrl.flag ? 'bulb-top-a' : 'bulp-top' ">
+                    <div class="reflection"></div>
+                </div>
+                <div ng-class="ctrl.flag ? 'bulb-middle-1a' : 'bulb-middle-1'"></div>
+                <div ng-class="ctrl.flag ? 'bulb-middle-2a' : 'bulb-middle-2'"></div>
+                <div ng-class="ctrl.flag ? 'bulb-middle-3a' : 'bulb-middle-3'"></div>
+                <div class="bulb-bottom" ng-class="ctrl.flag ? 'bulb-bottom-a' : 'bulb-bottom' "></div>
+            </div>
+
+            <div id="base">
+                <div class="screw-top"></div>
+                <div class="screw-a"></div>
+                <div class="screw-b"></div>
+                <div class="screw-a"></div>
+                <div class="screw-b"></div>
+                <div class="screw-a"></div>
+                <div class="screw-b"></div>
+                <div class="screw-c"></div>
+                <div class="screw-d"></div>
+            </div>
+        </a>
+
+
+
+
+
+</div>
+</body>
+</html>
